@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="5.png">
+</head>
+<body>
+    <header>
+        <p>Main</p>
+        <div class="icons">
+            <a href="home.html"><img src="home.svg" alt="home"></a>
+            <a href="profile.html"><img src="profile.svg" alt="profile"></a>
+            <a href="settings.html"><img src="setting.svg" alt="setting"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="fight-row">
+
+            <div class="fighter player">
+                <h2><span id="currentName">Player</span></h2>
+                <div id="avatarContainer" class="profile-avatar">
+                    <img id="currentAvatar" src="3.png" alt="Character">
+                </div>
+                <div class="health-bar"><div id="playerHealthBar" class="health-fill"></div></div>
+                <p>Health: <span id="playerHealth">150/150</span></p>
+            </div>
+
+            <div class="fight-controls">
+                <p>Please pick 1 Attack zone and 2 Defence zones</p>
+                <div>
+                    <p>Attack Zones</p>
+                    <label><input type="radio" name="attack" value="Head">Head</label>
+                    <label><input type="radio" name="attack" value="Neck">Neck</label>
+                    <label><input type="radio" name="attack" value="Body">Body</label>
+                    <label><input type="radio" name="attack" value="Belly">Belly</label>
+                    <label><input type="radio" name="attack" value="Legs">Legs</label>
+                </div>
+                <div>
+                    <p>Defence Zones</p>
+                    <label><input type="checkbox" name="defence" value="Head">Head</label>
+                    <label><input type="checkbox" name="defence" value="Neck">Neck</label>
+                    <label><input type="checkbox" name="defence" value="Body">Body</label>
+                    <label><input type="checkbox" name="defence" value="Belly">Belly</label>
+                    <label><input type="checkbox" name="defence" value="Legs">Legs</label>
+                </div>
+                <button id="attackBtn" type="button">Attack!</button>
+            </div>
+
+            <div class="fighter enemy">
+                <h2 id="enemyName">NeonWhisk</h2>
+                <img id="enemyAvatar" src="6.png" alt="Character" class="profile-avatar">
+                <div class="health-bar"><div id="enemyHealthBar" class="health-fill"></div></div>
+                <p>Health: <span id="enemyHealth">120/120</span></p>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p></p>
+        </div>
+    </main>
+
+    <script src="fight.js" defer></script>
+</body>
+</html>
